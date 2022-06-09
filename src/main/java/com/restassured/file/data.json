@@ -1,0 +1,22 @@
+{
+  "uid": "Tester",
+  "companyId": "string",
+  "name": "Tester",
+  "startDate": "2022-06-09T10:46:03.619Z",
+  "endDate": "2022-06-09T10:46:03.619Z",
+  "timezone": "Africa/Abidjan",
+  "type": "Virtual",
+  "picture": "string",
+  "networkingHub": "string",
+  "presenters": [
+    "string"
+  ],
+  "organizers": [
+    "string"
+  ],
+  "autoSelectLatestReplay": true,
+  "disableEventRecording": true,
+  "betaOptIn": true,
+  "isRegistrationModeEnabled": true,
+  "isAttendeeRegistrationModeEnabled": true
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="141179" started-at="2022-06-05T23:01:07Z" finished-at="2022-06-05T23:03:28Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="141179" started-at="2022-06-05T23:01:07Z" finished-at="2022-06-05T23:03:28Z">
+      <class name="api.ApiTesting">
+        <test-method status="PASS" signature="get_Currencies()[pri:0, instance:api.ApiTesting@544a2ea6]" name="get_Currencies" duration-ms="1799" started-at="2022-06-06T04:01:07Z" finished-at="2022-06-06T04:01:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get_Currencies -->
+        <test-method status="PASS" signature="get_Currencies_Difference()[pri:0, instance:api.ApiTesting@544a2ea6]" name="get_Currencies_Difference" duration-ms="139370" started-at="2022-06-06T04:01:09Z" finished-at="2022-06-06T04:03:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get_Currencies_Difference -->
+      </class> <!-- api.ApiTesting -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
