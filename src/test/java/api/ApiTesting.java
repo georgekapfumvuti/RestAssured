@@ -3,8 +3,15 @@ package api;
 import com.restassured.util.Utils;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.json.JSONException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
+
+
+
+import java.io.File;
 
 
 @Test
@@ -14,6 +21,16 @@ public class ApiTesting extends Hook{
     public void add_event_with_token() {
         Response response = RestAssured.given().spec(Utils.create_request_specfication("token")).body(Utils.jsonFile_Retrievers("data")).when().post("/v1/event/create").then().extract().response();
         Assert.assertEquals(response.statusCode(),200);
+    }
+
+    public void add_event_response_payload_schema() throws JSONException {
+        RestAssured.given().spec(Utils.create_request_specfication("token"))
+                .body(Utils.jsonFile_Retrievers("data"))
+                .when()
+                .post("/v1/event/create")
+                .then()
+                .assertThat()
+                .body(matchesJsonSchemaInClasspath("schema.json"));
     }
 
     public void add_event_with_token_and_without_body() {

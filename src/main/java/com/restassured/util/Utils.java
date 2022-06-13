@@ -78,6 +78,20 @@ public class Utils {
     }
 
 
+    public static JSONObject jsonFile_object_Retriever(String filename) {
+        JSONParser parser = new JSONParser();
+        JSONObject jsonObject = null;
+        try {
+            Object obj = parser.parse(new FileReader("src/main/java/com/restassured/file/"+filename+".json"));
+            jsonObject = (JSONObject)obj;
+        } catch(IOException | ParseException e) {
+            e.printStackTrace();
+        }
+        return jsonObject;
+    }
+
+
+
     public static File jsonFile_Retrievers(String filename) {
         return new File("src/main/java/com/restassured/file/"+filename+".json");
     }
