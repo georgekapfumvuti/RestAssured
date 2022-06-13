@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uid": {
+      "type": "string"
+    },
+    "companyUid": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "picture": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "presenters": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "organizers": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "networkingHub": {
+      "type": "string"
+    },
+    "eventInfo": {
+      "type": "object",
+      "properties": {
+        "privateEventInfo": {
+          "type": "object",
+          "properties": {
+            "attendeePasscode": {
+              "type": "string"
+            },
+            "presenterPasscode": {
+              "type": "string"
+            },
+            "hostPasscode": {
+              "type": "string"
+            },
+            "rtmpKey": {
+              "type": "string"
+            },
+            "rtmpUrl": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "attendeePasscode",
+            "presenterPasscode",
+            "hostPasscode",
+            "rtmpKey",
+            "rtmpUrl"
+          ]
+        }
+      },
+      "required": [
+        "privateEventInfo"
+      ]
+    },
+    "autoSelectLatestReplay": {
+      "type": "boolean"
+    },
+    "isAttendeeRegistrationModeEnabled": {
+      "type": "boolean"
+    },
+    "isRegistrationModeEnabled": {
+      "type": "boolean"
+    },
+    "disableEventRecording": {
+      "type": "boolean"
+    }
+  }
+}
